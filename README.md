@@ -62,3 +62,12 @@ A aplicação sobe em `http://localhost:8080`.
 ## Documentação da API
 
 Com a aplicação rodando, acesse:
+http://localhost:8080/api-guide
+
+## Exemplo de uso
+
+```bash
+curl -X POST http://localhost:8080/tarefas \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Estudar Spring Boot", "concluida": false}'
+```
