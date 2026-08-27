@@ -69,5 +69,5 @@ http://localhost:8080/api-guide
 ```bash
 curl -X POST http://localhost:8080/tarefas \
   -H "Content-Type: application/json" \
-  -d '{"titulo": "Estudar Spring Boot", "concluida": false}'
+  -d '{"titulo": "Entregar o Trabalho até Segunda", "concluida": false}'
 ```
