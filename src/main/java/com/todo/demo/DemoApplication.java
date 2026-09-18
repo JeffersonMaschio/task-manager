@@ -12,7 +12,7 @@ import java.awt.*;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		//FlatDarkLaf.setup();
+		FlatDarkLaf.setup();
 
 		SwingUtilities.invokeLater(Frame::new);
 

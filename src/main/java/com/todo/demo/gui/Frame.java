@@ -49,13 +49,27 @@ public class Frame extends JFrame {
         exit.setMaximumSize(buttonExitSize);
         exit.setBackground(Color.red);
         exit.setFocusPainted(false);
-        topBar.add(Box.createHorizontalGlue());
+        //topBar.add(Box.createHorizontalGlue());
 
         //---------------------------
+        // User
+        JButton userButton = new JButton();
+        userButton.setBorderPainted(false);
 
-        topBar.add(exit);
+        ImageIcon userIcon = new ImageIcon(getClass().getResource("/icons/circle-user.png"));
+        userButton.setIcon(userIcon);
+
+        Dimension userButtonSize = new Dimension(30, 30);
+        userButton.setPreferredSize(userButtonSize);
+        userButton.setMinimumSize(userButtonSize);
+        userButton.setMaximumSize(userButtonSize);
+        userButton.setFocusPainted(false);
+
+        //topBar.add(exit);
+        topBar.add(userButton);
         return topBar;
     }
+
 
     private JScrollPane centerPanel() {
         JScrollPane centerPanel = new JScrollPane();
