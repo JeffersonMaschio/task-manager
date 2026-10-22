@@ -3,9 +3,9 @@ package com.todo.demo.gui;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.util.ArrayList;
 
-public class Frame extends JFrame {
+public class
+Frame extends JFrame {
 
     private final Color bg = new Color(30, 30, 46);
     private final Color fg = new Color(205, 214, 244);
@@ -28,8 +28,9 @@ public class Frame extends JFrame {
         JToolBar topBar = new JToolBar();
         topBar.setOrientation(JToolBar.HORIZONTAL);
         topBar.setFloatable(false);
+        topBar.putClientProperty("FlatLaf.style", "background: #1E1E2E");
 
-        topBar.setBackground(getBg());
+        //topBar.setBackground(getBg());
         topBar.setPreferredSize(new Dimension(0, 40));
 
         //---------------------------
@@ -59,7 +60,7 @@ public class Frame extends JFrame {
         ImageIcon userIcon = new ImageIcon(getClass().getResource("/icons/circle-user.png"));
         userButton.setIcon(userIcon);
 
-        Dimension userButtonSize = new Dimension(30, 30);
+        Dimension userButtonSize = new Dimension(32, 32);
         userButton.setPreferredSize(userButtonSize);
         userButton.setMinimumSize(userButtonSize);
         userButton.setMaximumSize(userButtonSize);
@@ -78,13 +79,13 @@ public class Frame extends JFrame {
         centerPanel.setForeground(getFg());
 
         centerPanel.setBorder(new EmptyBorder(7, 7, 7, 7));
-
+/*
         for (int i = 0; i < 3; i++) {
             JButton but = new JButton();
             but.setAlignmentX(Component.CENTER_ALIGNMENT);
             but.setMaximumSize(new Dimension(100, 60));
             centerPanel.add(but);
-        }
+        }*/
 
         return centerPanel;
     }
